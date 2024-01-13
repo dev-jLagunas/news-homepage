@@ -29,6 +29,7 @@
     />
   </head>
   <body>
+    <div id="overlay"></div>
     <main class="content-container">
       <!-- Nav Bar -->
       <nav class="nav-container">
@@ -47,7 +48,7 @@
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
         </ul>
-        <button class="hamburger-btn">
+        <button class="btn hamburger-btn" id="hamburger-btn">
           <img
             src="images/icon-menu.svg"
             alt="Hamburger toggle menu icon"
@@ -55,7 +56,8 @@
           />
         </button>
         <!-- Navigational links for mobile devices. -->
-        <div class="nav-links-sm-container">
+        <div class="nav-links-sm-container" id="nav-links-sm-container">
+          <button class="btn"><img src="images/icon-menu-close.svg" alt="Close 'X' button" class="close-btn"></button>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">New</a></li>

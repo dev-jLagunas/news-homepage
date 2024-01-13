@@ -29,7 +29,109 @@
     />
   </head>
   <body>
-    <h1>Stuff Goes Here</h1>
+    <main class="content-container">
+      <nav class="nav-container">
+        <div class="img-wrapper">
+          <img
+            src="images/logo.svg"
+            alt="News site company logo."
+            class="img-logo"
+          />
+        </div>
+        <ul class="nav-links-lg-container">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+        <button class="hamburger-btn">
+          <img
+            src="images/icon-menu.svg"
+            alt="Hamburger toggle menu icon"
+            class="hamburger-icon"
+          />
+        </button>
+        <!-- Navigational links for mobile devices. -->
+        <div class="nav-links-sm-container">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="main-content-container">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/image-web-3-desktop.jpg"
+          />
+          <img
+            src="images/image-web-3-mobile.jpg"
+            alt="Visualization of Web 3.0."
+          />
+        </picture>
+        <article class="main-content-article">
+          <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+          <p class="main-content-text">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="hamburger-btn"><a href="#">Read More</a></button>
+        </article>
+      </section>
+      <section class="mid-content-container">
+        <h2 class="mid-title">New</h2>
+        <article class="mid-content-article">
+          <h3 class="mid-title">Hydrogen VS Electric Cars</h3>
+          <p class="mid-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </article>
+        <article class="mid-content-article">
+          <h3 class="mid-title">The Downsides of AI Artistry</h3>
+          <p class="mid-text">What are the possible adverse effects of on-demand AI image generation?</p>
+        </article>
+        <article class="mid-content-article">
+          <h3 class="mid-title">Is VC Funding Drying Up?</h3>
+          <p class="mid-text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </section>
+      <section class="bottom-content-container">
+        <article class="bottom-content-article">
+          <div class="bottom-img-wrapper">
+            <img src="images/image-retro-pcs.jpg" alt="Old school desktop computers.">
+          </div>
+          <div class="bottom-content-info-wrapper">
+            <h4 class="bottom-content-number">01</h4>
+            <p class="bottom-content-title">Reviving Retro PCs</p>
+            <p class="bottom-content-description">What happens when old PCs are given modern upgrades?</p>
+        </div> 
+        </article>
+        <article class="bottom-content-article">
+          <div class="bottom-img-wrapper">
+            <img src="images/image-top-laptops.jpg" alt="A black keyboard of a modern laptop.">
+          </div>
+          <div class="bottom-content-info-wrapper">
+            <h4 class="bottom-content-number">02</h4>
+            <p class="bottom-content-title">Top 10 Laptops of 2022</p>
+            <p class="bottom-content-description">Our best picks for various needs and budgets.</p>
+        </div> 
+        </article>
+        <article class="bottom-content-article">
+          <div class="bottom-img-wrapper">
+            <img src="images/image-gaming-growth.jpg" alt="Video game controller floating above hand.">
+          </div>
+          <div class="bottom-content-info-wrapper">
+            <h4 class="bottom-content-number">03</h4>
+            <p class="bottom-content-title">The Growth of Gaming</p>
+            <p class="bottom-content-description">How the pandemic has sparked fresh opportunities.</p>
+        </div> 
+        </article>
+      </section>
+    </main>
+    <!-- JavaScript -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

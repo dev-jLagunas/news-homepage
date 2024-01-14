@@ -30,17 +30,20 @@
   </head>
   <body>
     <div id="overlay"></div>
-    <main class="content-container">
+    <main class="main-container">
       <!-- Nav Bar -->
       <nav class="nav-container">
         <div class="logo-wrapper">
           <img
             src="images/logo.svg"
             alt="News site company logo."
-            class="img-logo"
+            class="logo-img"
+            width="65"
+            height="40"
           />
         </div>
-        <!-- Navigational links for desktop devices. -->
+
+        <!-- Navigational Links - Desktop -->
         <ul class="nav-links-lg-container">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
@@ -55,7 +58,8 @@
             class="hamburger-icon"
           />
         </button>
-        <!-- Navigational links for mobile devices. -->
+
+        <!-- Navigational Links - Mobile -->
         <div class="nav-links-sm-container" id="nav-links-sm-container">
           <button class="btn">
             <img
@@ -73,25 +77,25 @@
           </ul>
         </div>
       </nav>
-      <!-- Main Header/Hero Content -->
+
+      <!-- Top Article - Headline -->
       <div class="content-grid-wrapper">
-        <section class="main-content-container">
-          <picture class="hero-img-wrapper">
+        <section class="top-article-container">
+          <picture class="top-img-wrapper">
             <source
               media="(min-width: 768px)"
               srcset="images/image-web-3-desktop.jpg"
-              class="lg-hero-img"
             />
             <img
               src="images/image-web-3-mobile.jpg"
               alt="Visualization of Web 3.0."
-              class="hero-img"
+              class="top-img"
             />
           </picture>
-          <article class="main-content-article">
-            <h1 class="main-title">The Bright <br />Future of Web 3.0?</h1>
-            <div class="main-content-text-wrapper">
-              <p class="main-content-text">
+          <article class="top-article">
+            <h1 class="top-title">The Bright <br />Future of Web 3.0?</h1>
+            <div class="top-article-info-wrapper">
+              <p class="top-article-info">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
@@ -100,39 +104,41 @@
             </div>
           </article>
         </section>
-        <!-- Mid Article Content -->
-        <section class="mid-content-container">
+
+        <!-- Mid Article - Content -->
+        <section class="mid-article-container">
           <h2 class="mid-main-title">New</h2>
-          <article class="mid-content-article">
-            <h3 class="mid-title">Hydrogen VS Electric Cars</h3>
-            <p class="mid-text">
+          <article class="mid-article">
+            <h3 class="mid-article-title">Hydrogen VS Electric Cars</h3>
+            <p class="mid-article-text">
               Will hydrogen-fueled cars ever catch up to EVs?
             </p>
           </article>
-          <article class="mid-content-article">
-            <h3 class="mid-title">The Downsides of AI Artistry</h3>
-            <p class="mid-text">
+          <article class="mid-article">
+            <h3 class="mid-article-title">The Downsides of AI Artistry</h3>
+            <p class="mid-article-text">
               What are the possible adverse effects of on-demand AI image
               generation?
             </p>
           </article>
-          <article class="mid-content-article">
-            <h3 class="mid-title">Is VC Funding Drying Up?</h3>
-            <p class="mid-text">
+          <article class="mid-article">
+            <h3 class="mid-article-title">Is VC Funding Drying Up?</h3>
+            <p class="mid-article-text">
               Private funding by VC firms is down 50% YOY. We take a look at
               what that means.
             </p>
           </article>
-          <article class="mid-content-article">
-            <h3 class="mid-title">Need To Fill Up Space?</h3>
-            <p class="mid-text">
+          <article class="mid-article">
+            <h3 class="mid-article-title">Need To Fill Up Space?</h3>
+            <p class="mid-article-text">
               Dont worry, almost no one reads this far into articles.
             </p>
           </article>
         </section>
-        <!-- Bottom Article Content -->
-        <section class="bottom-content-container">
-          <article class="bottom-content-article">
+
+        <!-- Bottom Article - Content -->
+        <section class="bottom-article-container">
+          <article class="bottom-article">
             <div class="bottom-img-wrapper">
               <img
                 src="images/image-retro-pcs.jpg"
@@ -140,15 +146,15 @@
                 class="bottom-img"
               />
             </div>
-            <div class="bottom-content-info-wrapper">
-              <h4 class="bottom-content-number-title">01</h4>
-              <p class="bottom-content-title">Reviving Retro PCs</p>
-              <p class="bottom-content-description">
+            <div class="bottom-article-info-wrapper">
+              <h4 class="bottom-article-number">01</h4>
+              <p class="bottom-article-title">Reviving Retro PCs</p>
+              <p class="bottom-article-text">
                 What happens when old PCs are given modern upgrades?
               </p>
             </div>
           </article>
-          <article class="bottom-content-article">
+          <article class="bottom-article">
             <div class="bottom-img-wrapper">
               <img
                 src="images/image-top-laptops.jpg"
@@ -156,15 +162,15 @@
                 class="bottom-img"
               />
             </div>
-            <div class="bottom-content-info-wrapper">
-              <h4 class="bottom-content-number-title">02</h4>
-              <p class="bottom-content-title">Top 10 Laptops of 2022</p>
-              <p class="bottom-content-description">
+            <div class="bottom-article-info-wrapper">
+              <h4 class="bottom-article-number">02</h4>
+              <p class="bottom-article-title">Top 10 Laptops of 2022</p>
+              <p class="bottom-article-text">
                 Our best picks for various needs and budgets.
               </p>
             </div>
           </article>
-          <article class="bottom-content-article">
+          <article class="bottom-article">
             <div class="bottom-img-wrapper">
               <img
                 src="images/image-gaming-growth.jpg"
@@ -172,10 +178,10 @@
                 class="bottom-img"
               />
             </div>
-            <div class="bottom-content-info-wrapper">
-              <h4 class="bottom-content-number-title">03</h4>
-              <p class="bottom-content-title">The Growth of Gaming</p>
-              <p class="bottom-content-description">
+            <div class="bottom-article-info-wrapper">
+              <h4 class="bottom-article-number">03</h4>
+              <p class="bottom-article-title">The Growth of Gaming</p>
+              <p class="bottom-article-text">
                 How the pandemic has sparked fresh opportunities.
               </p>
             </div>
@@ -183,6 +189,7 @@
         </section>
       </div>
     </main>
+
     <!-- JavaScript -->
     <script type="module" src="/main.js"></script>
   </body>

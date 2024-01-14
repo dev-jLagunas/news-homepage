@@ -22,7 +22,7 @@ Containers work to group semantically related elements together
 for layout purposes.
 */
 
-.content-container {
+.main-container {
   width: 95%;
   margin: 0 auto;
 }
@@ -57,7 +57,7 @@ for layout purposes.
   margin-top: 5rem;
 }
 
-.mid-content-container {
+.mid-article-container {
   background-color: var(--very-dark-blue);
   color: var(--off-white);
   margin-block: 2rem;
@@ -68,12 +68,12 @@ for layout purposes.
   gap: 2rem;
 }
 
-.mid-content-article {
+.mid-article {
   border-bottom: 1px solid var(--dark-grayish-blue);
   padding-bottom: 1rem;
 }
 
-.bottom-content-container {
+.bottom-article-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -81,13 +81,13 @@ for layout purposes.
   margin-inline: auto;
 }
 
-.bottom-content-article {
+.bottom-article {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bottom-content-info-wrapper {
+.bottom-article-info-wrapper {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -115,22 +115,22 @@ wrappers are purely presentational and do not
 add any semantic meaning to the content they wrap. */
 
 .logo-wrapper {
-  height: 30px;
+  height: 40px;
 }
 
-.hero-img-wrapper {
+.top-img-wrapper {
   width: clamp(350px, 80%, 800px);
   height: clamp(200px, 50vh, 600px);
   margin-inline: auto;
 }
 
-.img-logo {
+.logo-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.hero-img {
+.top-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -177,12 +177,12 @@ add any semantic meaning to the content they wrap. */
 }
 
 /* Font Styles */
-.main-title {
+.top-title {
   font-size: 2.2rem;
   font-weight: 800;
 }
 
-.main-content-text {
+.top-article-info {
   font-size: 0.9rem;
   color: var(--dark-grayish-blue);
 }
@@ -191,33 +191,34 @@ add any semantic meaning to the content they wrap. */
   color: var(--soft-orange);
 }
 
-.mid-title {
+.mid-article-title {
   font-size: 1.1rem;
 }
 
-.bottom-content-number-title {
+.bottom-article-number {
   font-size: 2rem;
   font-weight: 800;
   color: var(--grayish-blue);
 }
 
-.bottom-content-title {
+.bottom-article-title {
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--very-dark-blue);
 }
-.mid-text {
+
+.mid-article-text {
   color: var(--grayish-blue);
   font-size: 0.9rem;
 }
 
-.bottom-content-description {
+.bottom-article-text {
   font-size: 0.8rem;
   color: var(--dark-grayish-blue);
 }
 
 @media (min-width: 768px) {
-  .content-container {
+  .main-container {
     width: 70%;
   }
 
@@ -234,18 +235,18 @@ add any semantic meaning to the content they wrap. */
     display: none;
   }
 
-  .hero-img-wrapper {
+  .top-img-wrapper {
     width: 100%;
     height: 100%;
   }
 
-  .bottom-content-container {
+  .bottom-article-container {
     width: 60%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .content-container {
+  .main-container {
     width: 95%;
     height: max-content;
   }
@@ -257,27 +258,27 @@ add any semantic meaning to the content they wrap. */
     gap: 1rem;
   }
 
-  .main-content-container {
+  .top-article-container {
     grid-column: 1 / 6;
     grid-row: 1 / 2;
     height: 60%;
     margin-top: 2rem;
   }
 
-  .main-content-article {
+  .top-article {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
   }
 
-  .mid-content-container {
+  .mid-article-container {
     grid-column: 6 / 9;
     grid-row: 1 / 2;
     height: min-content;
   }
 
-  .bottom-content-container {
+  .bottom-article-container {
     flex-direction: row;
     width: 100%;
     grid-column: 1 / 9;
@@ -285,17 +286,17 @@ add any semantic meaning to the content they wrap. */
     height: min-content;
   }
 
-  .main-title {
+  .top-title {
     font-size: 2.5rem;
     width: 40%;
   }
 
-  .main-content-text-wrapper {
+  .top-article-info-wrapper {
     padding-right: 2rem;
     width: 60%;
   }
 
-  .main-content-text {
+  .top-article-info {
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -316,19 +317,19 @@ add any semantic meaning to the content they wrap. */
 }
 
 @media screen and (min-width: 1440px) {
-  .content-container {
+  .main-container {
     width: 90%;
   }
 
-  .main-content-container {
+  .top-article-container {
     grid-column: 1 / 7;
   }
 
-  .mid-content-container {
+  .mid-article-container {
     grid-column: 7 / 9;
   }
 
-  .bottom-content-container {
+  .bottom-article-container {
     margin-top: -4rem;
     width: 100%;
     justify-content: space-between;
@@ -339,16 +340,16 @@ add any semantic meaning to the content they wrap. */
     height: 130px;
   }
 
-  .main-title {
+  .top-title {
     font-size: 2.8rem;
   }
 
-  .main-content-text-wrapper {
+  .top-article-info-wrapper {
     padding-left: 2rem;
     margin-bottom: 2rem;
   }
 
-  .bottom-content-info-wrapper {
+  .bottom-article-info-wrapper {
     gap: 1rem;
   }
 }

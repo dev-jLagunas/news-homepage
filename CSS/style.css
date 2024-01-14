@@ -18,8 +18,14 @@ Mobile Styles - News Homepage
 ******************************/
 
 /* Container Styles - 
-Containers work to group semantically related elements together.
+Containers work to group semantically related elements together
+for layout purposes.
 */
+
+.content-container {
+  width: 95%;
+  margin: 0 auto;
+}
 
 .nav-container {
   display: flex;
@@ -37,7 +43,7 @@ Containers work to group semantically related elements together.
   right: 0;
   top: 0;
   height: 100%;
-  width: 80%;
+  width: 70%;
   background-color: #fff;
   overflow: auto;
   transition: transform 0.3s ease-in-out;
@@ -48,7 +54,46 @@ Containers work to group semantically related elements together.
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
+}
+
+.mid-content-container {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  margin-block: 2rem;
+  padding: 1.5rem 1rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mid-content-article {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  padding-bottom: 1rem;
+}
+
+.bottom-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 2rem;
+  margin-inline: auto;
+}
+
+.bottom-content-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-content-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .open {
@@ -65,6 +110,43 @@ Containers work to group semantically related elements together.
   display: none;
 }
 
+/* Wrapper Styles - 
+wrappers are purely presentational and do not 
+add any semantic meaning to the content they wrap. */
+
+.logo-wrapper {
+  height: 30px;
+}
+
+.hero-img-wrapper {
+  width: clamp(350px, 80%, 800px);
+  height: clamp(200px, 50vh, 600px);
+  margin-inline: auto;
+}
+
+.img-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom-img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.bottom-img-wrapper {
+  height: 100%;
+  width: fit-content;
+}
+
 /* Button Styles */
 .btn {
   background: transparent;
@@ -77,9 +159,71 @@ Containers work to group semantically related elements together.
   right: 1rem;
 }
 
+.read-btn {
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.read-btn a {
+  color: var(--off-white);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* Font Styles */
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.main-content-text {
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+}
+
+.mid-main-title {
+  color: var(--soft-orange);
+}
+
+.mid-title {
+  font-size: 1.1rem;
+}
+
+.bottom-content-number-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--grayish-blue);
+}
+
+.bottom-content-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+}
+.mid-text {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+}
+
+.bottom-content-description {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+}
+
 @media (min-width: 768px) {
+  .content-container {
+    width: 70%;
+  }
+
   .nav-links-lg-container {
-    display: block;
+    display: flex;
+    gap: 1rem;
   }
 
   .nav-links-sm-container {
@@ -88,5 +232,123 @@ Containers work to group semantically related elements together.
 
   .hamburger-btn {
     display: none;
+  }
+
+  .hero-img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottom-content-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content-container {
+    width: 95%;
+    height: max-content;
+  }
+
+  .content-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .main-content-container {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    height: 60%;
+    margin-top: 2rem;
+  }
+
+  .main-content-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .mid-content-container {
+    grid-column: 6 / 9;
+    grid-row: 1 / 2;
+    height: min-content;
+  }
+
+  .bottom-content-container {
+    flex-direction: row;
+    width: 100%;
+    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+    height: min-content;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .main-content-text-wrapper {
+    padding-right: 2rem;
+    width: 60%;
+  }
+
+  .main-content-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .mid-main-title {
+    font-size: 2rem;
+  }
+
+  .read-btn {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .bottom-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .content-container {
+    width: 90%;
+  }
+
+  .main-content-container {
+    grid-column: 1 / 7;
+  }
+
+  .mid-content-container {
+    grid-column: 7 / 9;
+  }
+
+  .bottom-content-container {
+    margin-top: -4rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .bottom-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .main-title {
+    font-size: 2.8rem;
+  }
+
+  .main-content-text-wrapper {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .bottom-content-info-wrapper {
+    gap: 1rem;
   }
 }

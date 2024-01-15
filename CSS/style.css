@@ -11,6 +11,19 @@ Variables
   --grayish-blue: hsl(233, 8%, 79%);
   --dark-grayish-blue: hsl(236, 13%, 42%);
   --very-dark-blue: hsl(240, 100%, 5%);
+
+  /* Font Sizes */
+  --font-size-small: 0.8rem;
+  --font-size-regular: 1rem;
+  --font-size-title: 1.1rem;
+  --font-size-large: 2rem;
+
+  /* Font Weight */
+  --font-bold: 800;
+
+  /* Spacing */
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
 }
 
 /*****************************
@@ -18,20 +31,20 @@ Mobile Styles - News Homepage
 ******************************/
 
 /* Container Styles - 
-Containers work to group semantically related elements together
-for layout purposes.
+Containers work with semantically related elements
+for layout and styling purposes.
 */
 
 .main-container {
-  width: 95%;
-  margin: 0 auto;
+  width: 90%;
+  margin-inline: auto;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 1rem;
+  margin-block: var(--spacing-small);
 }
 
 .nav-links-lg-container {
@@ -53,19 +66,19 @@ for layout purposes.
 .nav-links-sm-container ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 5rem;
+  gap: var(--spacing-small);
+  margin: 5rem 0 0 2rem;
 }
 
 .mid-article-container {
   background-color: var(--very-dark-blue);
   color: var(--off-white);
-  margin-block: 2rem;
+  margin-block: var(--spacing-medium);
   padding: 1.5rem 1rem;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--spacing-medium);
 }
 
 .mid-article {
@@ -76,8 +89,8 @@ for layout purposes.
 .bottom-article-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-block: 2rem;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium);
   margin-inline: auto;
 }
 
@@ -87,16 +100,9 @@ for layout purposes.
   align-items: center;
 }
 
-.bottom-article-info-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-  gap: 0.5rem;
-  width: 100%;
-}
+/* Interactive Mobile Nav Styles */
 
-.open {
+.open-mobile-nav {
   transform: translateX(0);
 }
 
@@ -111,11 +117,11 @@ for layout purposes.
 }
 
 /* Wrapper Styles - 
-wrappers are purely presentational and do not 
-add any semantic meaning to the content they wrap. */
+wrappers are used for layout and presentational reasons
+as required by the project design guidelines. */
 
 .logo-wrapper {
-  height: 40px;
+  height: 25px;
 }
 
 .top-img-wrapper {
@@ -123,6 +129,26 @@ add any semantic meaning to the content they wrap. */
   height: clamp(200px, 50vh, 600px);
   margin-inline: auto;
 }
+
+.top-article-info-wrapper {
+  padding-top: 0.5rem;
+}
+
+.bottom-img-wrapper {
+  height: 100%;
+  width: fit-content;
+}
+
+.bottom-article-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Image Styles */
 
 .logo-img {
   height: 100%;
@@ -142,12 +168,8 @@ add any semantic meaning to the content they wrap. */
   object-fit: contain;
 }
 
-.bottom-img-wrapper {
-  height: 100%;
-  width: fit-content;
-}
-
 /* Button Styles */
+
 .btn {
   background: transparent;
   border: 0;
@@ -155,17 +177,18 @@ add any semantic meaning to the content they wrap. */
 
 .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: var(--spacing-medium);
+  right: var(--spacing-medium);
 }
 
 .read-btn {
   background-color: var(--soft-red);
   color: var(--off-white);
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
+  padding: 0.8rem var(--spacing-small);
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+  letter-spacing: 4px;
+  font-weight: var(--font-bold);
 }
 
 .read-btn a {
@@ -176,15 +199,22 @@ add any semantic meaning to the content they wrap. */
   cursor: pointer;
 }
 
-/* Font Styles */
+/* Text and Title Font Styles */
+
 .top-title {
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: var(--font-bold);
 }
 
 .top-article-info {
-  font-size: 0.9rem;
+  font-size: var(--font-size-regular);
   color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+.nav-container a {
+  color: var(--dark-grayish-blue);
+  font-size: var(--font-size-regular);
 }
 
 .mid-main-title {
@@ -192,30 +222,34 @@ add any semantic meaning to the content they wrap. */
 }
 
 .mid-article-title {
-  font-size: 1.1rem;
+  font-size: var(--font-size-title);
 }
 
 .bottom-article-number {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-bold);
   color: var(--grayish-blue);
 }
 
 .bottom-article-title {
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-bold);
   color: var(--very-dark-blue);
 }
 
 .mid-article-text {
   color: var(--grayish-blue);
-  font-size: 0.9rem;
+  font-size: var(--font-size-regular);
 }
 
 .bottom-article-text {
-  font-size: 0.8rem;
+  font-size: var(--font-size-small);
   color: var(--dark-grayish-blue);
 }
+
+/***************************************************
+Tablet Styles - News Homepage - Media Queries Start
+****************************************************/
 
 @media (min-width: 768px) {
   .main-container {
@@ -224,15 +258,15 @@ add any semantic meaning to the content they wrap. */
 
   .nav-links-lg-container {
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing-medium);
   }
 
   .nav-links-sm-container {
     display: none;
   }
 
-  .hamburger-btn {
-    display: none;
+  .bottom-article-container {
+    width: 60%;
   }
 
   .top-img-wrapper {
@@ -240,10 +274,14 @@ add any semantic meaning to the content they wrap. */
     height: 100%;
   }
 
-  .bottom-article-container {
-    width: 60%;
+  .hamburger-btn {
+    display: none;
   }
 }
+
+/***************************************************
+Desktop Styles - News Homepage - Min Width 1024px
+****************************************************/
 
 @media screen and (min-width: 1024px) {
   .main-container {
@@ -251,25 +289,15 @@ add any semantic meaning to the content they wrap. */
     height: max-content;
   }
 
-  .content-grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 1rem;
+  .nav-container {
+    margin-top: var(--spacing-medium);
   }
 
   .top-article-container {
     grid-column: 1 / 6;
     grid-row: 1 / 2;
     height: 60%;
-    margin-top: 2rem;
-  }
-
-  .top-article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+    margin-top: var(--spacing-medium);
   }
 
   .mid-article-container {
@@ -284,6 +312,30 @@ add any semantic meaning to the content they wrap. */
     grid-column: 1 / 9;
     grid-row: 2 / 3;
     height: min-content;
+    margin-top: -1rem;
+  }
+  .content-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: var(--spacing-small);
+    margin-top: -1rem;
+  }
+
+  .top-article-info-wrapper {
+    padding-right: var(--spacing-medium);
+    width: 60%;
+  }
+
+  .top-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-small);
+  }
+
+  .mid-article-text {
+    font-size: var(--font-size-small);
   }
 
   .top-title {
@@ -291,23 +343,18 @@ add any semantic meaning to the content they wrap. */
     width: 40%;
   }
 
-  .top-article-info-wrapper {
-    padding-right: 2rem;
-    width: 60%;
-  }
-
   .top-article-info {
-    font-size: 1rem;
+    font-size: var(--font-size-regular);
     line-height: 1.5;
   }
 
   .mid-main-title {
-    font-size: 2rem;
+    font-size: var(--font-size-large);
   }
 
   .read-btn {
-    font-size: 1rem;
-    padding: 0.5rem 2rem;
+    font-size: var(--font-size-regular);
+    padding: 0.5rem var(--spacing-medium);
   }
 
   .bottom-img {
@@ -315,6 +362,10 @@ add any semantic meaning to the content they wrap. */
     height: 120px;
   }
 }
+
+/***************************************************
+Desktop Styles - News Homepage - Min Width 1440px
+****************************************************/
 
 @media screen and (min-width: 1440px) {
   .main-container {
@@ -330,9 +381,26 @@ add any semantic meaning to the content they wrap. */
   }
 
   .bottom-article-container {
-    margin-top: -4rem;
+    margin-top: -5rem;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    height: 40px;
+  }
+
+  .top-article-info-wrapper {
+    padding-left: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .content-grid-wrapper {
+    margin-top: -1rem;
+  }
+
+  .bottom-article-info-wrapper {
+    gap: var(--spacing-small);
   }
 
   .bottom-img {
@@ -342,14 +410,6 @@ add any semantic meaning to the content they wrap. */
 
   .top-title {
     font-size: 2.8rem;
-  }
-
-  .top-article-info-wrapper {
-    padding-left: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .bottom-article-info-wrapper {
-    gap: 1rem;
+    margin-top: -1rem;
   }
 }

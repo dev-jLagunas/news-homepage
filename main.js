@@ -9,11 +9,11 @@ const closeBtn = document.querySelector(".close-btn");
 // Event Listeners
 // Event Listeners
 hamburgerBtn.addEventListener("click", function () {
-  mobileNav.classList.add("open");
+  mobileNav.classList.add("open-mobile-nav");
   overlay.style.display = "block";
 });
 
 closeBtn.addEventListener("click", function () {
-  mobileNav.classList.remove("open");
+  mobileNav.classList.remove("open-mobile-nav");
   overlay.style.display = "none";
 });

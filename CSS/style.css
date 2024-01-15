@@ -121,7 +121,7 @@ wrappers are used for layout and presentational reasons
 as required by the project design guidelines. */
 
 .logo-wrapper {
-  height: 25px;
+  height: min-content;
   width: max-content;
 }
 
@@ -150,12 +150,6 @@ as required by the project design guidelines. */
 }
 
 /* Image Styles */
-
-.logo-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 
 .top-img {
   width: 100%;
